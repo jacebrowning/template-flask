@@ -6,57 +6,43 @@ name = "pypi"
 
 [requires]
 
-python_version = "3.6"
+python_version = "3.6.4"
 
 [packages]
 
-# Django
-django = "~=2.0"
-django-allauth = "*"
-django-cors-headers = "~=1.2.0"
-django-grappelli = "*"
-django-memoize = "*"
-
-# API
-djangorestframework = "~=3.7"
-drf-nested-routers = "*"
-django-rest-swagger = "*"
+# Flask
+Flask = "~=0.12.2"
+Flask-API = "~=1.0"
 
 # Storage
-dj-database-url = "==0.4.2"
-psycopg2-binary = "~=2.6"
-django-redis-cache = "*"
+
+# Email
 
 # Utilities
-faker = "*"
-minilog = "~=0.2.1"
+webargs = "~=1.5"
 
 # Deployment
-whitenoise = "~=3.3"
-gunicorn = "~=19.7"
+Flask-Script = "~=2.0"
+gunicorn = "*"
 
 [dev-packages]
 
 # Linters
-pylint = "*"
+pylint = "~=1.7.5"
+astroid = "~=1.5.3" # temporary to work around apparent regression in 1.6
 pycodestyle = "*"
 pydocstyle = "*"
 
 # Testing
 pytest = "~=3.3"
-pytest-django = "*"
 pytest-describe = "*"
-pytest-expecter = "~=1.1"
-pytest-randomly = "*"
+pytest-expecter = "*"
 pytest-cov = "*"
-freezegun = "*"
+pytest-random = "*"
 coverage-space = "*"
 
 # Tooling
-django-livereload-server = "*"
 honcho = "*"
-splinter = "*"
-fire = "*"
 sniffer = "*"
-pync = {version = "<2.0", sys_platform = "== 'darwin'"}
-MacFSEvents = {version = "*", sys_platform = "== 'darwin'"}
+pync = { version = "<2.0", sys_platform = "== 'darwin'" }
+MacFSEvents = { version = "*", sys_platform = "== 'darwin'" }

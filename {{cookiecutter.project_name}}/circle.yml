@@ -52,6 +52,6 @@ jobs:
           name: Running end-to-end tests
           command: make build data test-system
           environment:
-            DJANGO_SETTINGS_MODULE: config.settings.staging
+            FLASK_ENV: staging
             HEROKU_APP_NAME: {{cookiecutter.project_name}}-staging
             SECRET_KEY: staging

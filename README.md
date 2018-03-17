@@ -1,11 +1,11 @@
-# template-django
+# template-flask
 
-Generates the structure for a Django application using [cookiecutter](https://github.com/audreyr/cookiecutter).
+Generates the structure for a Flask application using [cookiecutter](https://github.com/audreyr/cookiecutter).
 
-Unix: [![Unix Build Status](https://img.shields.io/travis/jacebrowning/template-django/master.svg)](https://travis-ci.org/jacebrowning/template-django)
-Windows: [![Windows Build Status](https://img.shields.io/appveyor/ci/jacebrowning/template-django.svg)](https://ci.appveyor.com/project/jacebrowning/template-django)
+Unix: [![Unix Build Status](https://img.shields.io/travis/jacebrowning/template-flask/master.svg)](https://travis-ci.org/jacebrowning/template-flask)
+Windows: [![Windows Build Status](https://img.shields.io/appveyor/ci/jacebrowning/template-flask.svg)](https://ci.appveyor.com/project/jacebrowning/template-flask)
 
-This is a template for a typical Django application following modern packaging conventions. It utilizes popular libraries alongside Make and pipenv to fully automate all development and deployment tasks. Check out the live demo: [jacebrowning/template-django-demo](https://github.com/jacebrowning/template-django-demo)
+This is a template for a typical Flask application following modern packaging conventions. It utilizes popular libraries alongside Make and pipenv to fully automate all development and deployment tasks. Check out the live demo: [jacebrowning/template-flask-demo](https://github.com/jacebrowning/template-flask-demo)
 
 If you are instead looking for a [Python library](https://caremad.io/posts/2013/07/setup-vs-requirement/) template, check out [jacebrowning/template-python](https://github.com/jacebrowning/template-python).
 
@@ -15,7 +15,7 @@ Install `cookiecutter` and generate a project:
 
 ```
 $ pip install cookiecutter
-$ cookiecutter gh:jacebrowning/template-django -f
+$ cookiecutter gh:jacebrowning/template-flask -f
 ```
 
 Cookiecutter will ask you for some basic info (your name, project name, python package name, etc.) and generate a base Python project for you.
@@ -23,7 +23,7 @@ Cookiecutter will ask you for some basic info (your name, project name, python p
 ## Features
 
 * Settings broken out into local, staging, and production
-* API using [Django REST Framework](http://www.django-rest-framework.org/)
+* API using [Flask API](http://www.flaskapi.org/)
 * Unit and integration testing using `pytest`, `pytest-describe`, and `pytest-expecter`
 * End-to-end testing using [Splinter](https://splinter.readthedocs.io/)
 * `Makefile` for automating common development tasks:
@@ -36,5 +36,5 @@ Cookiecutter will ask you for some basic info (your name, project name, python p
 
 ## Updates
 
-Checkout the appropriate branch of [template-django-demo](https://github.com/jacebrowning/template-django-demo) and manually merge changes into your project.
+Checkout the appropriate branch of [template-flask-demo](https://github.com/jacebrowning/template-flask-demo) and manually merge changes into your project.
 

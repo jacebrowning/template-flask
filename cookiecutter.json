@@ -1,7 +1,6 @@
 {
     "full_name": "Jace Browning",
     "github_username": "jacebrowning",
-    "github_repo": "template-django-demo",
-    "project_name": "demo_project",
-    "first_app_name": "demo_app"
+    "github_repo": "template-flask-demo",
+    "project_name": "demo_project"
 }
