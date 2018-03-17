@@ -15,7 +15,6 @@ ci: check test ## CI | Run all validation targets
 .PHONY: watch
 watch: install ## CI | Rerun all validation targests in a loop
 	@ rm -rf $(FAILURES)
-	@ pipenv run pip install MacFSEvents > /dev/null
 	$(RUN) sniffer
 
 # SYSTEM DEPENDENCIES #########################################################
@@ -28,8 +27,6 @@ doctor: ## Check for required system dependencies
 	echo export SECRET_KEY=local >> $@
 	echo export DATABASE_URL=postgresql://localhost/{{cookiecutter.project_name}}_dev >> $@
 	echo export REDIS_URL=redis://127.0.0.1:6379/0 >> $@
-	echo >> $@
-	echo export TEST_EMAILS=you@yourdomain.com >> $@
 	- direnv allow
 
 # PROJECT DEPENDENCIES ########################################################
@@ -87,7 +84,7 @@ reset: install ## Database | Create a new database, migrate, and seed it
 
 # VALIDATION TARGETS ##########################################################
 
-PYTHON_PACKAGES := config {{cookiecutter.project_name}}
+PYTHON_PACKAGES := {{cookiecutter.project_name}}
 FAILURES := .cache/v/cache/lastfailed
 
 .PHONY: check

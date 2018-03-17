@@ -14,12 +14,8 @@ python_version = "3.6.4"
 Flask = "~=0.12.2"
 Flask-API = "~=1.0"
 
-# Storage
-
-# Email
-
 # Utilities
-webargs = "~=1.5"
+minilog = "*"
 
 # Deployment
 Flask-Script = "~=2.0"
@@ -28,8 +24,7 @@ gunicorn = "*"
 [dev-packages]
 
 # Linters
-pylint = "~=1.7.5"
-astroid = "~=1.5.3" # temporary to work around apparent regression in 1.6
+pylint = "*"
 pycodestyle = "*"
 pydocstyle = "*"
 
@@ -37,12 +32,15 @@ pydocstyle = "*"
 pytest = "~=3.3"
 pytest-describe = "*"
 pytest-expecter = "*"
+pytest-randomly = "*"
 pytest-cov = "*"
-pytest-random = "*"
+freezegun = "*"
 coverage-space = "*"
 
 # Tooling
 honcho = "*"
+splinter = "*"
+fire = "*"
 sniffer = "*"
 pync = { version = "<2.0", sys_platform = "== 'darwin'" }
 MacFSEvents = { version = "*", sys_platform = "== 'darwin'" }
