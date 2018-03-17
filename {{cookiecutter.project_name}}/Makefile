@@ -141,7 +141,10 @@ run: install ## Run the applicaiton
 
 .PHONY: run-prod
 run-prod: install ## Run the application (simulate production)
-	FLASK_ENV=prod $(RUN) honcho start
+	pipenv shell "bin/pre_compile; exit \$$?"
+	pipenv shell "bin/post_compile; exit \$$?"
+	pipenv shell "heroku local release; exit \$$?"
+	pipenv shell "FLASK_ENV=prod heroku local web; exit \$$?"
 
 # RELEASE TARGETS #############################################################
 

@@ -1,1 +1,2 @@
 web: gunicorn {{cookiecutter.project_name}}.app:app
+release: bin/release
