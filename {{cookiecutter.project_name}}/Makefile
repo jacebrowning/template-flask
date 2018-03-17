@@ -23,12 +23,6 @@ watch: install ## CI | Rerun all validation targests in a loop
 doctor: ## Check for required system dependencies
 	bin/verchew
 
-.envrc:
-	echo export SECRET_KEY=local >> $@
-	echo export DATABASE_URL=postgresql://localhost/{{cookiecutter.project_name}}_dev >> $@
-	echo export REDIS_URL=redis://127.0.0.1:6379/0 >> $@
-	- direnv allow
-
 # PROJECT DEPENDENCIES ########################################################
 
 export PIPENV_VENV_IN_PROJECT=true
@@ -139,16 +133,15 @@ test-system: install
 
 # SERVER TARGETS ##############################################################
 
+export FLASK_APP={{cookiecutter.project_name}}/app.py
+
 .PHONY: run
-run: .envrc install ## Run the applicaiton
-	$(RUN) honcho start --procfile=Procfile.dev --port=$${PORT:-8000}
+run: install ## Run the applicaiton
+	$(RUN) flask run
 
 .PHONY: run-prod
-run-prod: .envrc install ## Run the application (simulate production)
-	pipenv shell "bin/pre_compile; exit \$$?"
-	pipenv shell "bin/post_compile; exit \$$?"
-	pipenv shell "heroku local release; exit \$$?"
-	pipenv shell "heroku local web; exit \$$?"
+run-prod: install ## Run the application (simulate production)
+	FLASK_ENV=prod $(RUN) honcho start
 
 # RELEASE TARGETS #############################################################
 

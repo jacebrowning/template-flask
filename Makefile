@@ -33,7 +33,6 @@ $(ENV): Pipfile*
 .PHONY: build
 build: install
 	pipenv run cookiecutter . --no-input --overwrite-if-exists
-	cd demo_project && pipenv install --dev
 
 # CLEANUP #####################################################################
 
