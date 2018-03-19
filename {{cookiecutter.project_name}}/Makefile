@@ -137,7 +137,7 @@ export FLASK_APP={{cookiecutter.project_name}}/app.py
 
 .PHONY: run
 run: install ## Run the applicaiton
-	$(RUN) flask run
+	FLASK_ENV=dev $(RUN) python manage.py runserver
 
 .PHONY: run-prod
 run-prod: install ## Run the application (simulate production)

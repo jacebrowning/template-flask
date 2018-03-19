@@ -13,6 +13,7 @@ python_version = "3.6"
 # Flask
 Flask = "~=0.12.2"
 Flask-API = "~=1.0"
+Flask-Bootstrap = { git = "https://github.com/beenje/flask-bootstrap", ref = "bootstrap-v4" }
 
 # Utilities
 minilog = "*"
@@ -38,7 +39,6 @@ freezegun = "*"
 coverage-space = "*"
 
 # Tooling
-honcho = "*"
 splinter = "*"
 fire = "*"
 sniffer = "*"
