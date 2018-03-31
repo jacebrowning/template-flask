@@ -1,2 +1,2 @@
-web: gunicorn {{cookiecutter.project_name}}.app:app
+web: gunicorn manage:app
 release: bin/release
