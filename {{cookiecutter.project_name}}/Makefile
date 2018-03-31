@@ -139,12 +139,12 @@ export FLASK_APP={{cookiecutter.project_name}}/app.py
 run: install ## Run the applicaiton
 	FLASK_ENV=dev $(RUN) python manage.py runserver
 
-.PHONY: run-prod
-run-prod: install ## Run the application (simulate production)
+.PHONY: run-production
+run-production: install ## Run the application (simulate production)
 	pipenv shell "bin/pre_compile; exit \$$?"
 	pipenv shell "bin/post_compile; exit \$$?"
 	pipenv shell "heroku local release; exit \$$?"
-	pipenv shell "FLASK_ENV=prod heroku local web; exit \$$?"
+	pipenv shell "FLASK_ENV=production heroku local web; exit \$$?"
 
 # RELEASE TARGETS #############################################################
 

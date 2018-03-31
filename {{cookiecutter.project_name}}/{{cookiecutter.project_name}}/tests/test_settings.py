@@ -8,8 +8,8 @@ from {{cookiecutter.project_name}}.settings import get_config
 def describe_get_config():
 
     def when_valid():
-        config = get_config('prod')
-        expect(config.ENV) == 'prod'
+        config = get_config('production')
+        expect(config.ENV) == 'production'
 
     def when_empty():
         with expect.raises(AssertionError):

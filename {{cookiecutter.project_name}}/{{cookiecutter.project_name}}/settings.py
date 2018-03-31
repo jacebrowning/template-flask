@@ -2,7 +2,6 @@ import os
 
 
 class Config:
-    """Base configuration."""
 
     ENV = None
 
@@ -13,28 +12,29 @@ class Config:
     SECRET_KEY = os.getenv('SECRET_KEY')
 
 
-class ProdConfig(Config):
-    """Production configuration."""
+class ProductionConfig(Config):
 
-    ENV = 'prod'
+    ENV = 'production'
 
 
-class TestConfig(Config):
-    """Test configuration."""
+class StagingConfig(ProductionConfig):
 
-    ENV = 'test'
+    ENV = 'staging'
+
+
+class LocalConfig(Config):
+
+    ENV = 'local'
 
     DEBUG = True
-    TESTING = True
     SECRET_KEY = ENV
 
 
-class DevConfig(Config):
-    """Development configuration."""
+class TestConfig(LocalConfig):
 
-    ENV = 'dev'
+    ENV = 'test'
 
-    DEBUG = True
+    TESTING = True
     SECRET_KEY = ENV
 
 
