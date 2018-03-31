@@ -4,8 +4,4 @@ branch = true
 
 omit =
     .venv/*
-    */migrations/*
-    */management/*
     */tests/*
-    */admin.py
-    */wsgi.py
