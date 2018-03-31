@@ -58,17 +58,15 @@ clean-all: clean
 
 .PHONY: migrations
 migrations: install  ## Database | Generate database migrations
-	$(RUN) python manage.py makemigrations
+	# TODO: Generate migrations
 
 .PHONY: migrate
 migrate: install ## Database | Run database migrations
-	$(RUN) python manage.py migrate
+	# TODO: Run migrations
 
 .PHONY: data
 data: install migrate ## Database | Seed data for manual testing
-	$(RUN) python manage.py gendata $(TEST_EMAILS)
 	# TODO: Load test data and fixtures
-	# $(RUN) python manage.py loaddata content
 
 .PHONY: reset
 reset: install ## Database | Create a new database, migrate, and seed it
