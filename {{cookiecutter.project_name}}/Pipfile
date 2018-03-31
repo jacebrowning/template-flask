@@ -39,6 +39,7 @@ freezegun = "*"
 coverage-space = "*"
 
 # Tooling
+honcho = "*"
 splinter = "*"
 fire = "*"
 sniffer = "*"
