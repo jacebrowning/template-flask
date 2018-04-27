@@ -11,7 +11,7 @@ python_version = "3.6"
 [packages]
 
 # Flask
-Flask = "~=0.12.2"
+Flask = "~=1.0"
 Flask-API = "~=1.0"
 Flask-Bootstrap = { git = "https://github.com/beenje/flask-bootstrap", ref = "bootstrap-v4" }
 
