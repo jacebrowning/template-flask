@@ -9,7 +9,7 @@ import log
 from . import user
 
 
-PORT = int(os.getenv('TEST_PORT', 5001))
+PORT = int(os.getenv('TEST_PORT', '5001'))
 SITE = os.getenv('TEST_SITE', f"http://localhost:{PORT}")
 HEADLESS = bool(os.getenv('TEST_HEADLESS'))
 
