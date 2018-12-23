@@ -1,24 +1,9 @@
-# template-flask
+# Jace's Flask Template
 
-Generates the structure for a Flask application using [cookiecutter](https://github.com/audreyr/cookiecutter).
+This is a [cookiecutter](https://github.com/audreyr/cookiecutter) template for a typical Flask application following modern packaging conventions. It utilizes popular libraries alongside Make and pipenv to fully automate all development and deployment tasks. Check out the live demo: [jacebrowning/template-flask-demo](https://github.com/jacebrowning/template-flask-demo)
 
-Unix: [![Unix Build Status](https://img.shields.io/travis/jacebrowning/template-flask/master.svg)](https://travis-ci.org/jacebrowning/template-flask)
-Windows: [![Windows Build Status](https://img.shields.io/appveyor/ci/jacebrowning/template-flask.svg)](https://ci.appveyor.com/project/jacebrowning/template-flask)
-
-This is a template for a typical Flask application following modern packaging conventions. It utilizes popular libraries alongside Make and pipenv to fully automate all development and deployment tasks. Check out the live demo: [jacebrowning/template-flask-demo](https://github.com/jacebrowning/template-flask-demo)
-
-If you are instead looking for a [Python library](https://caremad.io/posts/2013/07/setup-vs-requirement/) template, check out [jacebrowning/template-python](https://github.com/jacebrowning/template-python).
-
-## Usage
-
-Install `cookiecutter` and generate a project:
-
-```
-$ pip install cookiecutter
-$ cookiecutter gh:jacebrowning/template-flask -f
-```
-
-Cookiecutter will ask you for some basic info (your name, project name, python package name, etc.) and generate a base Python project for you.
+[![Unix Build Status](https://img.shields.io/travis/jacebrowning/template-flask/master.svg?label=unix)](https://travis-ci.org/jacebrowning/template-flask)
+[![Windows Build Status](https://img.shields.io/appveyor/ci/jacebrowning/template-flask.svg?label=windows)](https://ci.appveyor.com/project/jacebrowning/template-flask)
 
 ## Features
 
@@ -33,6 +18,19 @@ Cookiecutter will ask you for some basic info (your name, project name, python p
     - Running style checkers (`pycodestyle`/`pydocstyle`) and linters (`pylint`)
 * Continuous Integration via [CircleCI](https://circleci.com/docs/2.0/)
 * Continuous Delivery via [Heroku](https://www.heroku.com/flow)
+
+If you are instead looking for a [Python library](https://caremad.io/posts/2013/07/setup-vs-requirement/) template, check out [jacebrowning/template-python](https://github.com/jacebrowning/template-python).
+
+## Usage
+
+Install `cookiecutter` and generate a project:
+
+```
+$ pip install cookiecutter
+$ cookiecutter gh:jacebrowning/template-flask -f
+```
+
+Cookiecutter will ask you for some basic info (your name, project name, python package name, etc.) and generate a base Python project for you.
 
 ## Updates
 
