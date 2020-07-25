@@ -2,7 +2,7 @@
 
 This is a [cookiecutter](https://github.com/audreyr/cookiecutter) template for a typical Flask application following modern packaging conventions. It utilizes popular libraries alongside Make and pipenv to fully automate all development and deployment tasks. Check out the live demo: [jacebrowning/template-flask-demo](https://github.com/jacebrowning/template-flask-demo)
 
-[![Unix Build Status](https://img.shields.io/travis/jacebrowning/template-flask/master.svg?label=unix)](https://travis-ci.org/jacebrowning/template-flask)
+[![Unix Build Status](https://img.shields.io/travis/jacebrowning/template-flask/main.svg?label=unix)](https://travis-ci.org/jacebrowning/template-flask)
 [![Windows Build Status](https://img.shields.io/appveyor/ci/jacebrowning/template-flask.svg?label=windows)](https://ci.appveyor.com/project/jacebrowning/template-flask)
 
 ## Features
