@@ -37,6 +37,7 @@ install: $(BACKEND_DEPENDENCIES) $(FRONTEND_DEPENDENCIES) ## Install project dep
 endif
 
 $(BACKEND_DEPENDENCIES):
+	@ rm -rf $(VENV)/.pipenv-*
 	pipenv install --dev
 	@ touch $@
 
