@@ -36,7 +36,7 @@ pytest-expecter = "*"
 pytest-randomly = "*"
 pytest-cov = "*"
 freezegun = "*"
-coveragespace = "==4.0b1"
+coveragespace = "~=4.0"
 
 # Tooling
 honcho = "*"

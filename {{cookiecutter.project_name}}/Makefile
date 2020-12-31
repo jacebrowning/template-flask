@@ -103,21 +103,21 @@ test-backend-unit: install
 	@ ( mv $(FAILURES) $(FAILURES).bak || true ) > /dev/null 2>&1
 	$(RUN) pytest $(PYTHON_PACKAGES) tests/unit
 	@ ( mv $(FAILURES).bak $(FAILURES) || true ) > /dev/null 2>&1
-	$(RUN) coveragespace set unit
+	$(RUN) coveragespace update unit
 
 .PHONY: test-backend-integration
 test-backend-integration: install
 	@ if test -e $(FAILURES); then $(RUN) pytest tests/integration; fi
 	@ rm -rf $(FAILURES)
 	$(RUN) pytest tests/integration
-	$(RUN) coveragespace set integration
+	$(RUN) coveragespace update integration
 
 .PHONY: test-backend-all
 test-backend-all: install
 	@ if test -e $(FAILURES); then $(RUN) pytest $(PYTHON_PACKAGES) tests/integration; fi
 	@ rm -rf $(FAILURES)
 	$(RUN) pytest $(PYTHON_PACKAGES) tests/integration
-	$(RUN) coveragespace set overall
+	$(RUN) coveragespace update overall
 
 .PHONY: test-frontend
 test-frontend: test-frontend-unit
